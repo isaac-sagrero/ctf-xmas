@@ -1,0 +1,32 @@
+version: '3'
+
+services:
+  mysql:
+    build:
+      context: ./docker/mysql
+      args:
+        mysql_version: 5.7
+    container_name: ctf-mysql
+    volumes:
+      - ./db:/docker-entrypoint-initdb.d
+    environment:
+      MYSQL_DATABASE: dbname
+      MYSQL_USER: dbuser
+      MYSQL_PASSWORD: pass
+      MYSQL_ROOT_PASSWORD: pass
+    ports:
+      - "3306:3306"
+    restart: always
+
+  php:
+    build:
+      context: ./docker/php
+      args:
+        php_version: 7.3-apache
+    container_name: ctf-php
+    ports:
+      - "80:80"
+    volumes:
+      - ./www:/var/www/html
+    links:
+      - mysql

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<!-- saved from url=(0043)https://cdpn.io/pixelsultan/fullpage/WrWZpd -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+  
+  
+<link rel="apple-touch-icon" type="image/png" href="https://www.imagen.com.mx/assets/img/imagen_share.png">
+<meta name="apple-mobile-web-app-title" content="CodePen">
+
+<link rel="shortcut icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico">
+
+<link rel="mask-icon" type="" href="https://cpwebassets.codepen.io/assets/favicon/logo-pin-8f3771b1072e3c38bd662872f6b673a722f4b3ca2421637d5596661b4e2132cc.svg" color="#111">
+
+
+  <title>CodePen - sidebar navigation with tooltips</title>
+  
+  
+  <link rel="stylesheet" href="./font-awesome.min.css">
+  
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-family: 'Lato', sans-serif;
+  line-height: 1;
+}
+
+body {
+  background-color: #F5F6F8;
+  overflow: hidden;
+}
+
+.sidebar-navigation {
+  display: inline-block;
+  min-height: 100vh;
+  width: 80px;
+  background-color: #313443;
+  float: left;
+}
+.sidebar-navigation ul {
+  text-align: center;
+  color: white;
+}
+.sidebar-navigation ul li {
+  padding: 28px 0;
+  cursor: pointer;
+  -webkit-transition: all ease-out 120ms;
+  transition: all ease-out 120ms;
+}
+.sidebar-navigation ul li i {
+  display: block;
+  font-size: 24px;
+  -webkit-transition: all ease 450ms;
+  transition: all ease 450ms;
+}
+.sidebar-navigation ul li .tooltip {
+  display: inline-block;
+  position: absolute;
+  background-color: #313443;
+  padding: 8px 15px;
+  border-radius: 3px;
+  margin-top: -26px;
+  left: 90px;
+  opacity: 0;
+  visibility: hidden;
+  font-size: 13px;
+  letter-spacing: .5px;
+}
+.sidebar-navigation ul li .tooltip:before {
+  content: '';
+  display: block;
+  position: absolute;
+  left: -4px;
+  top: 10px;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  width: 10px;
+  height: 10px;
+  background-color: inherit;
+}
+.sidebar-navigation ul li:hover {
+  background-color: #22252E;
+}
+.sidebar-navigation ul li:hover .tooltip {
+  visibility: visible;
+  opacity: 1;
+}
+.sidebar-navigation ul li.active {
+  background-color: #22252E;
+}
+.sidebar-navigation ul li.active i {
+  color: #98D7EC;
+}
+</style>
+
+  <script>
+  window.console = window.console || function(t) {};
+</script>
+
+  
+  
+  <script>
+  if (document.location.search.match(/type=embed/gi)) {
+    window.parent.postMessage("resize", "*");
+  }
+</script>
+
+
+</head>
+
+<body translate="no">
+  <nav class="sidebar-navigation">
+	<ul>
+		<li class="active">
+			<i class="fa fa-share-alt"></i>
+			<span class="tooltip">Connections</span>
+		</li>
+		<li>
+			<i class="fa fa-hdd-o"></i>
+			<span class="tooltip">Devices</span>
+		</li>
+		<li>
+			<i class="fa fa-newspaper-o"></i>
+			<span class="tooltip">Contacts</span>
+		</li>
+		<li>
+			<i class="fa fa-print"></i>
+			<span class="tooltip">Fax</span>
+		</li>
+		<li>
+			<i class="fa fa-sliders"></i>
+			<span class="tooltip">Settings</span>
+		</li>
+	</ul>
+</nav>
+    <script src="./stopExecutionOnTimeout-157cd5b220a5c80d4ff8e0e70ac069bffd87a61252088146915e8726e5d9f147.js"></script>
+
+  <script src="./jquery.min.js"></script>
+      <script id="rendered-js">
+$('ul li').on('click', function () {
+  $('li').removeClass('active');
+  $(this).addClass('active');
+});
+//# sourceURL=pen.js
+    </script>
+
+  
+
+
+
+
+ 
+</body></html>

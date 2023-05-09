@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+ <link rel="shortcut icon" href="dv.ico" />
+<html lang="es"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+  
+
+
+  <title>XmasHack 2020</title>
+  
+  
+  
+  
+<style>
+
+  .label {
+  color: white;
+  padding: 8px;
+  font-family: Arial;
+  float: left;
+}
+.success {background-color: #4CAF50;} /* Green */
+.info {background-color: #2196F3;} /* Blue */
+.warning {background-color: #ff9800;} /* Orange */
+.danger {background-color: #f44336;} /* Red */ 
+.other {background-color: #e7e7e7; color: black;} /* Gray */ 
+
+.myDiv {
+  border: 5px outset red;
+  background-color: lightblue;    
+  text-align: center;
+}
+body {
+  margin: 0;
+  background-color: black;
+}
+
+.star {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  background-color: white;
+}
+
+/* Set the animation, color, size and hide the text */
+.intro {
+    position: absolute;
+    top: 30%;
+    left: 35%;
+    z-index: 1;
+    animation: intro 6s ease-out 1s;
+    color: rgb(75, 213, 238);
+    font-weight: 400;
+    font-size: 300%;
+    opacity: 0;
+}
+
+@keyframes intro {
+    0% {
+        opacity: 0;
+    }
+    20% {
+        opacity: 1;
+    }
+    90% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+/* Set the animation & hide the logo */
+.logo {    
+    position: absolute;
+    top: 20%;
+    left: 45%;
+    z-index: 1;
+    margin: auto;
+    animation: logo 9s ease-out 9s;
+    opacity: 0;
+}
+
+.logo svg {
+    width: inherit;
+}
+
+/* Scale the logo down and maintain it centered */
+@keyframes logo {
+    0% {
+        width: 18em;        
+        transform: scale(2.75);
+        opacity: 1;
+    }
+    50% {
+        opacity: 1;
+        width: 18em;      
+    }
+    100% {
+        opacity: 0;
+        transform: scale(0.1);
+        width: 18em;
+    }
+}
+
+p {
+  color: #FFFF82;
+}
+
+/* Set the font, lean the board, position it */
+#board {
+  font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif;
+  transform: perspective(300px) rotateX(25deg);
+  transform-origin: 50% 100%;
+  text-align: justify;
+  position: absolute;
+  margin-left: -9em;
+  font-weight: bold;
+  overflow: hidden;
+  font-size: 350%;
+  height: 50em;
+  width: 18em;
+  bottom: 0;
+  left: 60%;
+}
+
+#board:after {    
+  position: absolute;
+  content: ' ';
+  bottom: 60%;
+  left: 0;
+  right: 0;
+  top: 0;
+}
+
+/* Set the scrolling animation and position it */
+#content {
+  animation: scroll 100s linear 16s;
+  position: absolute;
+  top: 100%;
+}
+
+#title, #subtitle {
+  text-align: center;
+}
+
+@keyframes scroll {
+    0% {
+        top: 100%;
+    }
+    100% {
+        top: -170%;
+    }
+}
+</style>
+
+  <script>
+  window.console = window.console || function(t) {};
+</script>
+
+  
+  
+  <script>
+  if (document.location.search.match(/type=embed/gi)) {
+    window.parent.postMessage("resize", "*");
+  }
+</script>
+
+
+</head>
+
+<body translate="no">
+  <section class="intro">
+  Hace mucho mucho tiempo<br> en un lugar lejano....
+</section>
+<section class="logo" align="center">
+
+  <img src="./logo.png"></section>
+</section>
+
+
+<audio id="miAudio" autoplay loop>
+  <source src="star.mp3" type="audio/mp3">
+  Lástima no podrás escuhcar el audio, no lo sopora tu navegador.
+</audio>
+<p></p>
+
+
+<script type="text/javascript">
+
+  var audio = document.getElementById('miAudio');
+  function inicio(){
+
+    window.location.href = "http://stackoverflow.com";
+  }
+
+  function play(){
+
+    audio.play();
+  }
+  function pause(){
+
+    audio.pause();
+  }
+
+</script>
+<img src="lado.png">
+<br>
+<p align="left">
+<span class="label danger" >******</span>
+<span onclick="inicio()" class="label danger" >Saltar intro</span>
+<span onclick="play()" class="label danger" >Reproducir audio</span>
+<span onclick="pause()" class="label danger" >Pausar audio</span>
+<span class="label danger" >******</span>
+
+</p>
+
+
+
+<div id="board">  
+  <div id="content">
+    <p id="title">XmasHack 2020</p>
+    <p id="subtitle">EL RETORNO DEL HACK</p>
+    <br>
+  
+    <p>El bien y el mal se enfrentan en una batalla épica donde los equipos de SOAR, Respuesta a incidentes, Ciberinteligencia, AppSec y Tiger Team buscarán detener el lado oscuro de la fuerza, únete a la batalla...</p>        
+  </div>  
+</div>
+    <script src="./stopExecutionOnTimeout-157cd5b220a5c80d4ff8e0e70ac069bffd87a61252088146915e8726e5d9f147.js"></script>
+
+  
+      <script id="rendered-js">
+// Sets the number of stars we wish to display
+const numStars = 100;
+
+// For every star we want to display
+for (let i = 0; i < numStars; i++) {if (window.CP.shouldStopExecution(0)) break;
+  let star = document.createElement("div");
+  star.className = "star";
+  var xy = getRandomPosition();
+  star.style.top = xy[0] + 'px';
+  star.style.left = xy[1] + 'px';
+  document.body.append(star);
+}
+
+// Gets random x, y values based on the size of the container
+window.CP.exitedLoop(0);function getRandomPosition() {
+  var y = window.innerWidth;
+  var x = window.innerHeight;
+  var randomX = Math.floor(Math.random() * x);
+  var randomY = Math.floor(Math.random() * y);
+  return [randomX, randomY];
+}
+
+</script>
+
+
+ 
+</body></html>

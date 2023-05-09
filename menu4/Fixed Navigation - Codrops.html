@@ -1,0 +1,92 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!-- saved from url=(0055)https://tympanus.net/Tutorials/FixedNavigationTutorial/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Fixed Navigation - Codrops</title>
+        
+        <link rel="stylesheet" href="./Fixed Navigation - Codrops_files/style.css" type="text/css" charset="utf-8">
+        <script type="text/javascript" async="" src="./Fixed Navigation - Codrops_files/ga.js"></script><script type="text/javascript" src="./Fixed Navigation - Codrops_files/jquery-1.3.2.js"></script>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-7243260-2']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+    <style>
+        body{
+            background:#fff url(desc.png) no-repeat 50px 100px;
+            font-family:Arial;
+            height:2000px;
+        }
+        .header
+        {
+            width:600px;
+            height:56px;
+            position:absolute;
+            top:0px;
+            left:25%;
+            background:#fff url(title.png) no-repeat top left;
+        }
+        a.back{
+            width:256px;
+            height:73px;
+            position:fixed;
+            bottom:15px;
+            right:15px;
+            background:#fff url(codrops_back.png) no-repeat top left;
+        }
+        .scroll{
+            width:133px;
+            height:61px;
+            position:fixed;
+            bottom:15px;
+            left:150px;
+            background:#fff url(scroll.png) no-repeat top left;
+        }
+        .info{
+            text-align:right;
+
+        }
+    </style><link rel="stylesheet" type="text/css" href="./Fixed Navigation - Codrops_files/demoad.css"></head>
+    
+    <body>
+        <div class="header"></div>
+        <div class="scroll"></div>
+        <ul id="navigation">
+            <li class="home"><a href="https://tympanus.net/Tutorials/FixedNavigationTutorial/" title="Home" style="margin-left: -85px;"></a></li>
+            <li class="about"><a href="https://tympanus.net/Tutorials/FixedNavigationTutorial/" title="About" style="margin-left: -85px;"></a></li>
+            <li class="search"><a href="https://tympanus.net/Tutorials/FixedNavigationTutorial/" title="Search" style="margin-left: -85px;"></a></li>
+            <li class="photos"><a href="https://tympanus.net/Tutorials/FixedNavigationTutorial/" title="Photos" style="margin-left: -85px;"></a></li>
+            <li class="rssfeed"><a href="https://tympanus.net/Tutorials/FixedNavigationTutorial/" title="Rss Feed" style="margin-left: -85px;"></a></li>
+            <li class="podcasts"><a href="https://tympanus.net/Tutorials/FixedNavigationTutorial/" title="Podcasts" style="margin-left: -85px;"></a></li>
+            <li class="contact"><a href="https://tympanus.net/Tutorials/FixedNavigationTutorial/" title="Contact" style="margin-left: -85px;"></a></li>
+        </ul>
+
+        <div class="info">
+            <a class="back" href="http://tympanus.net/codrops/2009/11/30/beautiful-slide-out-navigation-a-css-and-jquery-tutorial/"></a>
+            <a href="http://dryicons.com/">Icons by DryIcons.com</a>
+        </div>
+
+        <script type="text/javascript">
+            $(function() {
+                $('#navigation a').stop().animate({'marginLeft':'-85px'},1000);
+
+                $('#navigation > li').hover(
+                    function () {
+                        $('a',$(this)).stop().animate({'marginLeft':'-2px'},200);
+                    },
+                    function () {
+                        $('a',$(this)).stop().animate({'marginLeft':'-85px'},200);
+                    }
+                );
+            });
+        </script>
+        <script src="./Fixed Navigation - Codrops_files/demoad.js"></script><div id="cdawrap" style="display: block;"><a href="https://ad.doubleclick.net/ddm/trackclk/N718679.452584BUYSELLADS.COM/B23601142.286416854;dc_trk_aid=480171160;dc_trk_cid=140351232;dc_lat=;dc_rdid=;tag_for_child_directed_treatment=;tfua=;gdpr=$%7BGDPR%7D;gdpr_consent=$%7BGDPR_CONSENT_755%7D" class="carbon-img" target="_blank" rel="noopener"><img src="./Fixed Navigation - Codrops_files/Squarespace300.jpg" alt="Squarespace" border="0" height="100" width="130"></a><a href="https://ad.doubleclick.net/ddm/trackclk/N718679.452584BUYSELLADS.COM/B23601142.286416854;dc_trk_aid=480171160;dc_trk_cid=140351232;dc_lat=;dc_rdid=;tag_for_child_directed_treatment=;tfua=;gdpr=$%7BGDPR%7D;gdpr_consent=$%7BGDPR_CONSENT_755%7D" class="carbon-text" target="_blank" rel="noopener">Beautiful website templates for Creative Entrepreneurs</a><div class="cda-footer"><a class="carbon-poweredby" href="https://tympanus.net/codrops/advertise/" target="_blank" rel="noopener">Become a sponsor</a><span class="cda-remove" id="cda-remove">Close</span></div></div>
+    
+</body></html>
